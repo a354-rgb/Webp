@@ -1,0 +1,30 @@
+body {background: aliceblue;}
+
+h1 {
+    color: brown;
+    text-align: center;
+}
+
+form {
+	background : pink;
+	border-style : none;
+	border-width : 1px;
+	margin-left : 10px;
+	margin-right : 10px;
+}
+
+p {
+    font-family: "휴먼편지체" 1em;
+	text-indent: 1em;
+}
+
+span {
+	font-family : gothic;
+	font-weight : bold;
+	color : blue;
+}
+
+footer {
+    background: orange;
+    border-radius: 10px;
+}
