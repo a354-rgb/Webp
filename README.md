@@ -7,7 +7,7 @@
 ## 👨‍💻 작성자
 - **이름:** 이민혁
 - **기간:** 2026.09.02 ~ 진행 중
-- **이력서** [보기](./0930/report/myprofile/index.html)
+- **이력서:** [보기](https://a354-rgb.github.io/Webp/0930/report/myprofile/)
 
 ---
 
