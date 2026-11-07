@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 객체의 target</title>
+
+    <style>
+        div {
+            display: inline-block;
+            position: absolute;
+            visibility: hidden;
+            width: 200px;
+            height: 80px;
+            border: 1px solid yellowgreen;
+            background: aliceblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>아이템에 마우스를 올리면 설명 출력</h3>
+    <hr>
+    <p>여름 방학 때 하고 싶은 것들</p>
+    <ul onmouseover="over(event)" onmouseout="out(event)">
+        <li>자전거로 대한민국 일주</li>
+        <li>책 100권 읽기</li>
+        <li>철인 3종 경기 준비</li>
+        <li>자바스크립트 정복</li>
+    </ul>
+    <div id="div"></div>
+
+    <script>
+        let liArray = document.getElementsByTagName("li");
+        let div = document.getElementById("div");
+        let str = ["빨간자전거를 타고 서울, 대전, 대구, 부산 찍고, 목포, 인천을 거쳐 달린다",
+            "매일 2시간 이상 독서하기",
+            "격일로 달리기, 수영, 자전거 연습하기",
+            "매일 자바스크립트 문제 풀기"];;
+
+        function over(e) {
+            if (e.target.tagName != "LI") {
+                return;
+            }
+            
+            switch (e.target) {
+                case liArray[0]:
+                    div.innerHTML = str[0];
+                    break;
+                case liArray[1]:
+                    div.innerHTML = str[1];
+                    break;
+                case liArray[2]:
+                    div.innerHTML = str[2];
+                    break;
+                case liArray[3]:
+                    div.innerHTML = str[3];
+                    break;
+            }
+
+            div.style.left = e.clientX + "px";
+            div.style.top = e.clientY + "px";
+            div.style.visibility = "visible";
+
+        }
+
+        function out(e) {
+            if (e.target.tagName != "LI") {
+                return;
+            }
+            div.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>

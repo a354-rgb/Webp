@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오 버튼과 이미지 출력</title>
+
+    <script>
+        function drawImg() {
+            let found = null;
+            let fruit = document.getElementsByName("fruit");
+            for (let i = 0; i < fruit.length; ++i) {
+                if (fruit[i].checked == true) {
+                    found = fruit[i];
+                }
+            }
+            let img = document.getElementById("image");
+            img.src = found.value + ".png";
+        }
+    </script>
+</head>
+
+<body>
+    <h3>라디오 버튼과 이미지 출력</h3>
+    <hr>
+    <input type="radio" name="fruit" value="banana" onchange="drawImg()">바나나
+    <input type="radio" name="fruit" value="mango" onchange="drawImg()">망고
+    <input type="radio" name="fruit" value="apple" onchange="drawImg()" checked>사과
+    <p>
+        <img src="apple.png" id="image" alt="">
+    </p>
+</body>
+
+</html>
