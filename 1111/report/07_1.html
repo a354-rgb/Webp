@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산수를 풀어 봅시다</title>
+
+     <style>
+        td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+
+    <script>
+        function calc() {
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+            let score = 0;
+            for (let i = 0; i < qArray.length; i++){
+                if(eval(qArray[i].innerHTML) == parseInt(aArray[i].value)){
+                    score++;
+                }
+                else
+                    qArray[i].style.textDecoration = "line-through";
+            }
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>산수를 풀어 봅시다.</h3>
+    수식을 계산하여 답을 입력하고 채점 버튼을 누르세요.
+    <hr>
+    <form>
+    <table>
+        <tr>
+            <td class="question">5*6</td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question">7+5*3</td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question">23*2</td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question">35-7</td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="calc()">채점</button>
+            </td>
+            <td><span id="score">0</span></td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>

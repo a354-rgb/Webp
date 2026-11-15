@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산수를 풀어 봅시다</title>
+
+     <style>
+        td {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .score-cell {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+
+    <script>
+        function rand() {
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+            let c = ['+', '-', '*', '/'];
+            for (let i = 0; i < qArray.length; i++) {
+                qArray[i].innerHTML = (Math.floor(Math.random() * 20) + 1) +
+                                          c[Math.floor(Math.random() * 4)] +
+                                      (Math.floor(Math.random() * 20) + 1) + 
+                                      "";
+                aArray[i].value = "";
+                qArray[i].style.textDecoration = "none";
+            }
+            document.getElementById("score").innerHTML = 0;
+        }
+
+        function calc() {
+            let qArray = document.getElementsByClassName("question");
+            let aArray = document.getElementsByClassName("answer");
+            let score = 0;
+            for (let i = 0; i < qArray.length; i++){
+                if(eval(qArray[i].innerHTML) == parseInt(aArray[i].value)){
+                    score++;
+                }
+                else
+                    qArray[i].style.textDecoration = "line-through";
+            }
+            document.getElementById("score").innerHTML = score;
+        }
+    </script>
+</head>
+
+<body onload="rand()">
+    <h3>산수를 풀어 봅시다.</h3>
+    자동으로 문제가 만들어집니다. 답 입력 후 채점 버튼을 누르세요.
+    다시 버튼을 누르면 새로운 문제가 출력됩니다. 나누기 결과는 정수입니다.
+    <hr>
+    <form>
+    <table>
+        <tr>
+            <td class="question"></td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question"></td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question"></td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td class="question"></td>
+            <td><input class="answer" type="text" size="8"></td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="calc()">채점</button>
+            </td>
+            <td class="score-cell">
+                <span id="score">0</span>
+                <button type="button" onclick="rand()">다시</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+
+</html>
