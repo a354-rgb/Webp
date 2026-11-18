@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 455" role="img" aria-label="프로젝트 스크린샷을 교체할 수 있는 미리보기">
+  <rect width="720" height="455" fill="#e9eeeb"/>
+  <rect x="70" y="53" width="580" height="348" rx="13" fill="#27332f"/>
+  <path d="M83 53h554a13 13 0 0 1 13 13v31H70V66a13 13 0 0 1 13-13Z" fill="#34433d"/>
+  <circle cx="94" cy="77" r="5" fill="#94aa9d"/><circle cx="112" cy="77" r="5" fill="#94aa9d"/><circle cx="130" cy="77" r="5" fill="#94aa9d"/>
+  <rect x="172" y="68" width="218" height="17" rx="8" fill="#506159"/>
+  <rect x="88" y="116" width="114" height="264" rx="6" fill="#304039"/>
+  <rect x="107" y="139" width="72" height="9" rx="4" fill="#8da99a"/><rect x="107" y="168" width="58" height="7" rx="3" fill="#71887b"/><rect x="107" y="190" width="71" height="7" rx="3" fill="#71887b"/><rect x="107" y="212" width="49" height="7" rx="3" fill="#71887b"/>
+  <rect x="224" y="116" width="401" height="264" rx="6" fill="#202b27"/>
+  <rect x="249" y="140" width="130" height="9" rx="4" fill="#93b9a5"/>
+  <rect x="249" y="171" width="188" height="7" rx="3" fill="#81958a"/><rect x="249" y="190" width="315" height="7" rx="3" fill="#65796e"/>
+  <rect x="249" y="226" width="95" height="7" rx="3" fill="#a7c7b4"/><rect x="249" y="245" width="279" height="7" rx="3" fill="#65796e"/><rect x="249" y="264" width="230" height="7" rx="3" fill="#65796e"/>
+  <rect x="249" y="301" width="154" height="47" rx="5" fill="#344f42"/><rect x="416" y="301" width="181" height="47" rx="5" fill="#2c4036"/>
+  <rect x="260" y="425" width="200" height="17" rx="8" fill="#fff" fill-opacity=".84"/>
+  <text x="360" y="437" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#526b5d">ADD PROJECT SCREENSHOT</text>
+</svg>
